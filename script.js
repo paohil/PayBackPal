@@ -22,25 +22,47 @@ window.addEventListener('scroll', () => {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Get references to the slider inputs and value displays
-  const amountSlider = document.getElementById('amount');
-  const durationSlider = document.getElementById('duration');
+  const amountInput = document.getElementById('amount');
+  const durationInput = document.getElementById('duration');
   const amountValue = document.getElementById('amount-value');
   const durationValue = document.getElementById('duration-value');
+  const processingFee = document.getElementById('processing-fee');
+  const monthlyPaymentInput = document.getElementById('monthly-payment');
+  const calculateBtn = document.getElementById('calculate-btn');
 
-  // Initialize the displayed values
-  amountValue.textContent = amountSlider.value;
-  durationValue.textContent = durationSlider.value;
-
-  // Update displayed value on input change
-  amountSlider.addEventListener('input', function() {
-    amountValue.textContent = amountSlider.value;
+  // Update value displays when sliders are moved
+  amountInput.addEventListener('input', function() {
+    amountValue.textContent = amountInput.value;
   });
 
-  durationSlider.addEventListener('input', function() {
-    durationValue.textContent = durationSlider.value;
+  durationInput.addEventListener('input', function() {
+    durationValue.textContent = durationInput.value;
+  });
+
+  // Function to calculate the monthly payment
+  function calculateMonthlyPayment() {
+    const amount = parseFloat(amountInput.value);
+    const duration = parseInt(durationInput.value);
+    const fee = 700; // Processing fee
+    
+    // Simple formula to calculate the monthly payment
+    const interestRate = 0.05; // Example annual interest rate of 5%
+    const monthlyInterestRate = interestRate / 12;
+    const numberOfPayments = duration;
+    
+    // Calculate the monthly payment
+    const monthlyPayment = (amount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments)) + fee / numberOfPayments;
+    
+    return monthlyPayment.toFixed(2);
+  }
+
+  // Calculate and update monthly payment when button is clicked
+  calculateBtn.addEventListener('click', function() {
+    const monthlyPayment = calculateMonthlyPayment();
+    monthlyPaymentInput.value = `₱${monthlyPayment}`;
   });
 });
+
 
 
 
