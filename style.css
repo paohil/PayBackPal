@@ -1,0 +1,858 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* Header Styling */
+header {
+  background-color: #0cc20c;
+  padding: 20px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #fff;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logo h1 a {
+  color: white;
+  text-decoration: none;
+}
+.apply-btn {
+  background-color: #ffffff;
+  color: #098d09;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #0cc20c;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .apply-btn {
+    display: none;
+  }
+}
+
+
+/*hero */
+  
+.hero {
+  background: url('./images/hero.jpg') no-repeat center center/cover;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.hero {
+  flex-direction: column;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-container{
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.steps-container {
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.step {
+  width: 100%;
+}
+
+.calculator {
+  flex: 1;
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+  padding: 20px;
+}
+
+.hero-left h1 {
+  color: #0cc20c;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-left p {
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+.calculator {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.calculator h3 {
+  text-align: center;
+  font-size: 1.75rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.slider-container input[type="range"] {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.value-display {
+  font-size: 1rem;
+  color: #333;
+  min-width: 80px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+form input[type="text"], 
+form input[type="range"], 
+form button {
+  width: 100%;
+}
+
+form input[type="text"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: #0cc20c;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #076c07;
+}
+
+.processing-fee, .monthly-payment {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.slider-container {
+  position: relative;
+}
+
+.slider-container span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .calculator {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* Steps Section */
+.steps-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start; /* Ensures the text and images are aligned at the top */
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content (images and text) within each step */
+  text-align: center;
+  width: 23%; /* Ensure consistent sizing and spacing for all steps */
+}
+
+.step img {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 10px; /* Add space between image and text */
+}
+
+.steps h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  /* Steps Section */
+  .steps-container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 100%;
+    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .step {
+    width: 48%; /* Ensure two columns fit with some spacing */
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .step img {
+    max-width: 80px;
+    margin-bottom: 10px;
+  }
+
+  .steps h2 {
+    padding: 20px;
+  }
+}
+
+.benefits-section {
+  padding: 50px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: url('./images/bene.jpg') no-repeat center center/cover;
+  height: auto;
+}
+
+.benefits-section h1 {
+  font-size: 2.5rem;
+  color: #0cc20c;
+  margin-bottom: 10px;
+}
+
+.benefits-section p {
+  font-size: 1.2rem;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px; /* Increased the max-width for wider screens */
+  margin: 0 auto;
+}
+
+.benefit-box {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  flex: 1 1 calc(33.333% - 20px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 350px; /* Adjusted the max-width */
+  margin: 0 auto;  /* Centering the box */
+  text-align: left; /* Aligning content to the left */
+}
+
+.benefit-box h2 {
+  font-size: 1.5rem;
+  color: #0cc20c;
+  margin-bottom: 15px;
+}
+
+.benefit-box p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.benefit-box a {
+  color: #0cc20c;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.benefit-box img {
+  width: 40px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .benefits-container {
+      flex-direction: column;
+  }
+
+  .benefit-box {
+      flex: 1 1 100%;
+      text-align: center; /* Center the text and image on small screens */
+  }
+
+  .benefit-box img {
+      margin: 0 auto 10px auto; /* Center the image */
+  }
+
+  .benefit-box h2, 
+  .benefit-box p, 
+  .benefit-box a,
+  .benefits-container h1 {
+      text-align: left; /* Center all text elements */
+  }
+}
+
+
+
+
+
+
+/* Testimonial Section Styles */
+.paybackpals-testimonials {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.paybackpals-testimonial-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.paybackpals-testimonial-container button {
+  background-color: #1d3557;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.paybackpals-testimonial-container button:focus {
+  outline: none;
+}
+
+.paybackpals-testimonial {
+  width: 80%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.paybackpals-testimonial-card {
+  background-color: #f1faee;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height:auto;
+}
+
+.paybackpals-testimonial img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.paybackpals-testimonial p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.paybackpals-client-name {
+  font-weight: bold;
+  color: #457b9d;
+}
+
+.paybackpals-client-role {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .paybackpals-testimonials {
+      max-width: 100%;
+      padding: 15px;
+  }
+
+  .paybackpals-testimonial-container {
+      flex-direction: column;
+  }
+
+  .paybackpals-testimonial {
+      width: 100%;
+  }
+
+  .paybackpals-testimonial-container button {
+      margin: 10px;
+  }
+
+  .paybackpals-testimonial-container button {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paybackpals-testimonials h2 {
+      font-size: 20px;
+  }
+
+  .paybackpals-testimonial-card {
+      padding: 15px;
+  }
+
+  .paybackpals-testimonial p {
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+
+
+
+footer {
+  background-color: #073507;
+  color: white;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  width: 23%;
+}
+
+.footer-section h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: #CCCCCC;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section p {
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.footer-section .social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-section .social-icons a img {
+  width: 24px;
+  height: 24px;
+}
+
+.footer-section a {
+  color: white;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+  }
+
+  .footer-section ul li {
+      margin-bottom: 5px;
+  }
+
+  .footer-section .social-icons {
+      justify-content: center;
+  }
+}
+
+
+
+/* Hero Section */
+.CONThero-section {
+  background-image: url('./images/contact.jpg'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.CONThero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for contrast */
+  z-index: 1;
+}
+
+.CONThero-content {
+  z-index: 2;
+}
+
+.CONThero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-info,
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+.contact-info h1,
+.contact-form h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+
+.contact-form button {
+  background-color: #0cc20c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0b720b;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+.hero-ROOMsection {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Full viewport height */
+  background: url('./images/abouthero.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-ROOMsectionW {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Full viewport height */
+  background: url('./images/contact.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+
+/* Welcome Section */
+.welcome-section {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px;
+  color: #0cc20c;
+}
+
+.welcome-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.welcome-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 18px;
+  color: black;
+  text-align: left;
+}
+
+/* General Styling for VALSteps and PARTSteps Sections */
+.VALsteps-container, .PARTsteps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.VALstep, .PARTstep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Adjust width as needed */
+}
+
+.VALsteps img, .PARTsteps img {
+  max-width: 80px;
+  margin-bottom: 10px;
+}
+
+.VALsteps h2, .PARTsteps h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #0cc20c;
+  font-weight: 700;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {
+  .VALstep, .PARTstep {
+    width: 100%;
+    max-width: 300px; /* Ensures that steps don’t become too large on small screens */
+    margin: 10px auto; /* Center steps on small screens */
+  }
+
+  .VALsteps img, .PARTsteps img {
+    max-width: 60px;
+  }
+
+  .VALsteps h2, .PARTsteps h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+}
+
+/* Specific Styling for VALSteps Section */
+.VALstep {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.VALstep h3 {
+  font-size: 20px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.VALstep p {
+  font-size: 16px;
+  color: #555;
+}
+
+.VALsteps h2 {
+  text-align: center;
+}
+
+/* Specific Styling for PARTSteps Section */
+.PARTstep img {
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.PARTstep {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+}
+
+.PARTsteps h2 {
+  text-align: center;
+}
+

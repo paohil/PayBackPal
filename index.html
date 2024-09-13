@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PayBackPal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+      <div class="logo">
+        <h1>PAYBACKPAL</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="apply-btn">Apply for a Loan</a>
+      <div class="hamburger">☰</div>
+    </div>
+  </header>
+  
+  
+
+  <div class="hero">
+    <div class="hero-container">
+    <!-- Left div with heading and paragraph -->
+    <div class="hero-left">
+      <h1>Get Your Loan in No Time</h1>
+      <p>Flexible and fast processing for all your needs</p>
+    </div>
+  
+    <!-- Right div with the loan calculator form -->
+    <div class="hero-right">
+      <div class="calculator">
+        <h3>Customize your terms:</h3>
+        <form id="loan-form">
+          <label for="amount">Amount to Borrow:</label>
+          <div class="slider-container">
+            <input type="range" id="amount" min="10000" max="50000" step="1000">
+            <div class="value-display" id="amount-value">30000</div>
+          </div>
+          
+          <label for="duration">Duration (Months):</label>
+          <div class="slider-container">
+            <input type="range" id="duration" min="2" max="12" step="1">
+            <div class="value-display" id="duration-value">7</div>
+          </div>
+          
+          <div class="processing-fee">
+            <p>Processing Fee</p>
+            <span id="processing-fee">700</span>
+          </div>
+          
+          <div class="monthly-payment">
+            <p>Monthly Payment</p>
+            <input type="text" id="monthly-payment" disabled>
+          </div>
+          
+          <button type="button" id="calculate-btn">Calculate</button>
+        </form>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+
+  <!-- 4 Steps -->
+  <section class="steps">
+    <h2>4 Steps to GET LOAN and BUILD YOUR CREDIT</h2>
+    <div class="steps-container">
+      <div class="step">
+        <img src="./images/download.png" alt="Download">
+        <h3>1. Download</h3>
+        <p>Get the LoanChamp App on Google Play</p>
+      </div>
+      <div class="step">
+        <img src="./images/reg.png" alt="Register">
+        <h3>2. Register</h3>
+        <p>Sign up in less than 1 minute</p>
+      </div>
+      <div class="step">
+        <img src="./images/apply.png" alt="Apply">
+        <h3>3. Apply</h3>
+        <p>Apply anytime, anywhere with our easy 10-minute process</p>
+      </div>
+      <div class="step">
+        <img src="./images/cash.png" alt="Get Cash">
+        <h3>4. Get Cash</h3>
+        <p>More than 3,000 channels nationwide to get cash upon approval</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- BENEFITS -->
+  <section class="benefits-section">
+    <h1>Time to reach for your goals. Apply for a personal loan.</h1>
+    <p>Plan your future with ease. Get a PayBackPal Personal Loan designed to cater to your milestones.</p>
+
+    <div class="benefits-container">
+        <div class="benefit-box">
+            <img src="./images/contract.png" alt="B1">
+            <h2>Flexible Payment Terms</h2>
+            <p>Get a personal loan with flexible payment terms. Enjoy rates as low as 1.25% monthly add-on with payment terms of up to 36 months.</p>
+            <a href="#">Read More</a>
+        </div>
+        <div class="benefit-box">
+            <img src="./images/wallet.png" alt="B1">
+            <h2>Ease of Application</h2>
+            <p>Apply online in just a few minutes. Just fill out the online application form and wait for a call regarding your loan application.</p>
+        </div>
+        <div class="benefit-box">
+            <img src="./images/safe.png" alt="B1">
+            <h2>Fast Approval</h2>
+            <p>Easy-approved personal loan lets you receive the cash you need as quickly as possible. Loans are processed in as fast as 7 business days.</p>
+        </div>
+        <div class="benefit-box">
+            <img src="./images/value.png" alt="B1">
+            <h2>Sizeable Loan Amount</h2>
+            <p>Enjoy one of the largest Personal Loan amounts in the Philippines. Borrow up to a maximum amount of Php 2M, subject to credit evaluation.</p>
+        </div>
+        <div class="benefit-box">
+            <img src="./images/piggy-bank.png" alt="B1">
+            <h2>Minimal Requirements</h2>
+            <p>Personal loan application is made easy with these simple requirements: <br> 1. Signed Promissory Note and Disclosure Statement (PNDS) <br> 2. Valid Philippine government ID</p>
+        </div>
+        <div class="benefit-box">
+            <img src="./images/donation.png" alt="B1">
+            <h2>Multi-purpose</h2>
+            <p>There’s no limit to the use of online personal loans. Use your loan for a variety of purposes such as travel, purchases of big-ticket items, weddings, or unexpected expenses.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="paybackpals-testimonials">
+    <h2>People We've Helped</h2>
+    <div class="paybackpals-testimonial-container">
+        <button class="paybackpals-prev-btn">&lt;</button>
+        <div class="paybackpals-testimonial" id="paybackpals-testimonial">
+            <!-- Dynamic content will be injected here -->
+        </div>
+        <button class="paybackpals-next-btn">&gt;</button>
+    </div>
+</section>
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-section connect-with-us">
+            <h3>Connect with us</h3>
+            <div class="social-icons">
+                <a href="#"><img src="./images/fb.png" alt="Facebook"></a>
+                <a href="#"><img src="./images/twitter.png" alt="X"></a>
+                <a href="#"><img src="./images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="./images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="./images/ig.png" alt="Instagram"></a>
+                <a href="#"><img src="./images/tiktok.png" alt="TikTok"></a>
+            </div>
+            <p>For inquiries, you may call our PayBackPal Contact Center at (02) 12-3450-678, or our domestic toll-free number at 1-234-5678-9101, or send an e-mail to customercare@paybackpal.com.ph</p>
+        </div>
+
+        <div class="footer-section site-links">
+            <h3>SITE LINKS</h3>
+            <ul>
+                <li><a href="#">Privacy Notice</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Investor Relations</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section quick-links">
+            <h3>QUICK LINKS</h3>
+            <ul>
+                <li><a href="#">ATM & Branch Locator</a></li>
+                <li><a href="#">Fees & Rates</a></li>
+                <li><a href="#">Foreign Exchange</a></li>
+                <li><a href="#">NAVPU</a></li>
+                <li><a href="#">Loan Calculator</a></li>
+                <li><a href="#">Downloadable Forms</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
